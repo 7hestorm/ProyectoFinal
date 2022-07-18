@@ -28,81 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.Label();
+            this.Phone = new System.Windows.Forms.Label();
+            this.NameTxt = new System.Windows.Forms.TextBox();
+            this.emailTxt = new System.Windows.Forms.TextBox();
+            this.PhoneTxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ListContacts = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // Name
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(61, 114);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(559, 615);
-            this.dataGridView1.TabIndex = 0;
+            this.Name.AutoSize = true;
+            this.Name.Location = new System.Drawing.Point(11, 34);
+            this.Name.Name = "Name";
+            this.Name.Size = new System.Drawing.Size(71, 17);
+            this.Name.TabIndex = 0;
+            this.Name.Text = "First Name";
+            this.Name.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Column1
+            // email
             // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.Name = "Column1";
+            this.email.AutoSize = true;
+            this.email.Location = new System.Drawing.Point(12, 85);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(70, 17);
+            this.email.TabIndex = 1;
+            this.email.Text = "Last Name";
             // 
-            // Column2
+            // Phone
             // 
-            this.Column2.HeaderText = "Numero telefonico";
-            this.Column2.Name = "Column2";
+            this.Phone.AutoSize = true;
+            this.Phone.Location = new System.Drawing.Point(18, 143);
+            this.Phone.Name = "Phone";
+            this.Phone.Size = new System.Drawing.Size(44, 17);
+            this.Phone.TabIndex = 2;
+            this.Phone.Text = "Phone";
             // 
-            // Column3
+            // NameTxt
             // 
-            this.Column3.HeaderText = "Correo";
-            this.Column3.Name = "Column3";
+            this.NameTxt.Location = new System.Drawing.Point(88, 26);
+            this.NameTxt.Name = "NameTxt";
+            this.NameTxt.Size = new System.Drawing.Size(177, 25);
+            this.NameTxt.TabIndex = 3;
+            this.NameTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Column4
+            // emailTxt
             // 
-            this.Column4.HeaderText = "Direccion";
-            this.Column4.Name = "Column4";
+            this.emailTxt.Location = new System.Drawing.Point(88, 82);
+            this.emailTxt.Name = "emailTxt";
+            this.emailTxt.Size = new System.Drawing.Size(177, 25);
+            this.emailTxt.TabIndex = 4;
+            // 
+            // PhoneTxt
+            // 
+            this.PhoneTxt.Location = new System.Drawing.Point(88, 140);
+            this.PhoneTxt.Name = "PhoneTxt";
+            this.PhoneTxt.Size = new System.Drawing.Size(177, 25);
+            this.PhoneTxt.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(371, 43);
+            this.button1.Location = new System.Drawing.Point(12, 277);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Agregar contacto";
+            this.button1.Size = new System.Drawing.Size(119, 51);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Add Contact";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ListContacts
+            // 
+            this.ListContacts.FormattingEnabled = true;
+            this.ListContacts.ItemHeight = 17;
+            this.ListContacts.Location = new System.Drawing.Point(359, 26);
+            this.ListContacts.Name = "ListContacts";
+            this.ListContacts.Size = new System.Drawing.Size(337, 395);
+            this.ListContacts.TabIndex = 7;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1383, 782);
+            this.ClientSize = new System.Drawing.Size(708, 436);
+            this.Controls.Add(this.ListContacts);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PhoneTxt);
+            this.Controls.Add(this.emailTxt);
+            this.Controls.Add(this.NameTxt);
+            this.Controls.Add(this.Phone);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.Name);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private Label Name;
+        private Label email;
+        private Label Phone;
+        private TextBox NameTxt;
+        private TextBox emailTxt;
+        private TextBox PhoneTxt;
         private Button button1;
+        private ListBox ListContacts;
     }
 }
